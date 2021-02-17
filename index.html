@@ -13,29 +13,28 @@
 </header>
 <!--figured using a flex box would be the best way to create the layout-->
 <main class="container">
-    <div class="box companies">
+    <div class="box" id="companies">
         <h3>List of Companies</h3>
         <span id="filter"><label>Filter: </label><input type="text" id="search-box"></span>
         <p>
             <button type="submit" id="submit">Go</button>
             <button type="reset" id="reset">Clear</button>
         </p>
-        <div id="list-container">
+        <div class="box" id="list-container">
             <div id="loader1"></div> <!--placeholder for loading animation-->
             <ul id="company-list"></ul>
         </div>
     </div>
-    <div id="information">
+    <div class="box" id="information">
+        <h3>Company Information</h3>
         <section> <!--using anouther flex box for the company information, maybe change the order of things down the line-->
-            <h3>Company Information</h3>
-            <h4 id="companyName"></h4>
-            <p id="description"></p>
+            <img src="" id="logo">
+            <h4 id="companyName">Sample</h4>
+            <p id="description">Sample</p>
             <label>Address:</label>
             <span id="address"></span>
             <label>Site:</label>
             <span><a href="" id="site"></a></span>
-            <label>Logo:</label>
-            <span id="logo"></span>
             <label>Symbol:</label>
             <span id="symbol"></span>
             <label>Sector:</label>
@@ -46,18 +45,20 @@
             <span id="exchange"></span>
         </section>
     </div>
-    <div id="data">
+    <div class="box" id="data">
         <div id="loader2"></div>
         <h3>Stock Data: <button type="button" id="viewChange">View Charts</button></h3>
-        <div id="stockDetails"></div>
+        <canvas id="stockDetails"></canvas>
     </div>
-    <div id="location">
+    <div class="box" id="location">
         <h3>Map</h3>
         <div id="map"></div>
     </div>
-    <div id="stockAverages"></div>
+    <div class="box" id="stockAverages">
+        <canvas id="averages"></canvas>
+    </div>
 </main>
-<script src="https://code.jscharting.com/2.9.0/jscharting.js"></script> <!--library for creating charts and graphs-confirmed with Randy that we can use it-->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script><!--library for creating charts and graphs-confirmed with Randy that we can use it-->
 <script src="assign1.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLCNWIaJH1ZVKdIi4w0slykR5nd-ArwkQ&callback=initMap"
         async defer></script>

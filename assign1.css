@@ -1,0 +1,52 @@
+.container {
+    display: grid;
+    width: 100%;
+    grid-gap: 10px;
+    grid-template-columns: 20rem 40rem auto;
+}
+.box {
+    background-color: #ccccff;
+    padding: 10px;
+}
+#companies {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 4;
+}
+
+#information {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
+}
+
+#information section {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 10rem auto;
+}
+
+#data {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 3;
+}
+#description {
+    grid-column: 1 / span 2;
+}
+
+#location {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 2;
+}
+
+#stockAverages {
+    grid-column: 3 / span 1;
+    grid-row: 4;
+}
+
+#map {
+    height: 300px;
+}
+#stockDetails {
+    width: 90%;
+    /*height: auto;*/
+    /*margin: 0 auto;*/
+}
