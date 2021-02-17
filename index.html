@@ -3,10 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <title>COMP 3512 Assign1</title>
-    <link rel="icon">
     <link rel="stylesheet" href="assign1.css">
 </head>
 <body>
+<header>
+    <!--will add picture later-->
+    <img id="Credits" name="credits" src="">
+    <h1>COMP 3512 Assign1</h1>
+</header>
+<!--figured using a flex box would be the best way to create the layout-->
+<main class="container">
+    <div class="box companies">
+        <h3>List of Companies</h3>
+        <span id="filter"><label>Filter: </label><input type="text" id="search-box"></span>
+        <p>
+            <button type="submit" id="submit">Go</button>
+            <button type="reset" id="reset">Clear</button>
+        </p>
+        <div id="list-container">
+            <div id="loader1"></div> <!--placeholder for loading animation-->
+            <ul id="company-list"></ul>
+        </div>
+    </div>
+    <div id="information">
+        <section> <!--using anouther flex box for the company information, maybe change the order of things down the line-->
+            <h3>Company Information</h3>
+            <h4 id="companyName"></h4>
+            <p id="description"></p>
+            <label>Address:</label>
+            <span id="address"></span>
+            <label>Site:</label>
+            <span><a href="" id="site"></a></span>
+            <label>Logo:</label>
+            <span id="logo"></span>
+            <label>Symbol:</label>
+            <span id="symbol"></span>
+            <label>Sector:</label>
+            <span id="sector"></span>
+            <label>Sub-Industry:</label>
+            <span id="subIndustry"></span>
+            <label>Exchange:</label>
+            <span id="exchange"></span>
+        </section>
+    </div>
+    <div id="data">
+        <div id="loader2"></div>
+        <h3>Stock Data: <button type="button" id="viewChange">View Charts</button></h3>
+        <div id="stockDetails"></div>
+    </div>
+    <div id="location">
+        <h3>Map</h3>
+        <div id="map"></div>
+    </div>
+    <div id="stockAverages"></div>
+</main>
+<script src="https://code.jscharting.com/2.9.0/jscharting.js"></script> <!--library for creating charts and graphs-confirmed with Randy that we can use it-->
 <script src="assign1.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLCNWIaJH1ZVKdIi4w0slykR5nd-ArwkQ&callback=initMap"
         async defer></script>
