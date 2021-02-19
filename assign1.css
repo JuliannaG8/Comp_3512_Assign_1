@@ -18,7 +18,7 @@
     grid-row: 1 / span 2;
 }
 
-#information section {
+#information section.view1 {
     display: grid;
     grid-gap: 5px;
     grid-template-columns: 10rem auto;
@@ -51,6 +51,25 @@
     /*margin: 0 auto;*/
 }
 
-.loading {
+.loading, .hidden {
     display: none;
+}
+.chartView {
+    display: grid;
+    width: 100%;
+    grid-gap: 10px;
+    grid-template-columns: auto 40rem;
+}
+.chartView #data {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+}
+.chartView #financials {
+    display: block;
+    grid-column: 2;
+    grid-row: 2 / span 1;
+}
+.chartView #information {
+    grid-column: 2;
+    grid-row: 1 / span 1;
 }
