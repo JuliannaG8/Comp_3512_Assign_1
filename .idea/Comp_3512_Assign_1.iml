@@ -6,5 +6,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Labs" />
     <orderEntry type="library" name="chart.js" level="application" />
+    <orderEntry type="library" name="echarts" level="application" />
   </component>
 </module>
