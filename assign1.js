@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", async function () {
             try {
                 const response = await fetch(`http://www.randyconnolly.com/funwebdev/3rd/api/stocks/history.php?symbol=${symbol}`);
                 stocks = await response.json();
-                stocks.sort(((a, b) => a.date < b.date ? -1 : 1));
             } catch (e) {
                 console.error(e);
             }
@@ -39,21 +38,25 @@ document.addEventListener("DOMContentLoaded", async function () {
             function calculateAverage (data) {
                 let total = 0;
                 data.forEach(stock => total+= Number(stock));
-                console.log(total);
                 return (total / data.length);
             }
     async function showData(company) {
         const stockData = await retrieveStocks(company.symbol);
+        stockData.sort((a, b) => a.date < b.date ? -1 : 1);
+        stockData.forEach(stock => console.log(stock));
         const barContainer = document.querySelector("#columns");
-        const view2LineContainer = document.querySelector("#line");
+        const view2Line = document.querySelector("#line");
+        const averageTable = document.querySelector("#averages");
         const candleContainer = echarts.init(document.querySelector("#candlestick"));
         const stockTable = document.querySelector("#stockDetails");
-            console.log(company, stockData[1]);
-            const highAvrg = stockData.sort((a, b) => a.high < b.high ? -1 : 1).map(stock => Number(stock.high));
-            const openAvrg = stockData.sort((a, b) => a.open < b.open ? -1 : 1).map(stock => Number(stock.open));
-            const closeAvrg = stockData.sort((a, b) => a.close < b.close ? -1 : 1).map(stock => Number(stock.close));
-            const lowAvrg = stockData.sort((a, b) => a.low < b.low ? -1 : 1).map(stock => Number(stock.low));
-            if (company.hasOwnProperty(financials)) {
+            console.log(company, stockData[0]);
+            const highs = stockData.sort((a, b) => a.high < b.high ? -1 : 1).map(stock => Number(stock.high));
+            const opening = stockData.sort((a, b) => a.open < b.open ? -1 : 1).map(stock => Number(stock.open));
+            const closing = stockData.map(stock => Number(stock.close));
+            const volume = stockData.map(stock => Number(stock.volume));
+            const sortClosing = stockData.sort((a, b) => a.close < b.close ? -1 : 1).map(stock => Number(stock.close));
+            const lows = stockData.sort((a, b) => a.low < b.low ? -1 : 1).map(stock => Number(stock.low));
+            if (company.hasOwnProperty('financials')) {
                 const barChart = new Chart(barContainer, {
                 type: "bar",
                 data: {
@@ -86,6 +89,40 @@ document.addEventListener("DOMContentLoaded", async function () {
                 const errorMsg = `${company.name} does not have stored financial data`;
                 barContainer.getContext("2d").fillText(errorMsg, 1, 50);
             }
+            const lineChart = new Chart(view2Line, {
+                type: "line",
+                data: {
+                    labels: ["2019-01-02", "2019-01-16", "2019-02-01", "2019-02-14", "2019-03-01", "2019-03-15", "2019-03-28"],
+                    datasets: [{
+                        data: closing,
+                        label: "closing",
+                        borderColor: "#6699ff",
+                        fill: false,
+                        yAxisID: "left-y-axis"
+                    }, {
+                        data: volume,
+                        label: "volume",
+                        borderColor: "#99ffdd",
+                        fill: false,
+                        yAxisID: "right-y-axis"
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            id: "left-y-axis",
+                            type: 'linear',
+                            position: "left",
+                            label: "closing values"
+                        }, {
+                            id: "right-y-axis",
+                            type: "linear",
+                            position: "right",
+                            label: "volume values"
+                        }]
+                    }
+                }
+            });
             const options = {
                 grid: {
                     height: "80%",
@@ -101,10 +138,10 @@ document.addEventListener("DOMContentLoaded", async function () {
                 series: [{
                     type: 'candlestick',
                     data: [
-                        [calculateAverage(openAvrg), calculateAverage(openAvrg), openAvrg[0], openAvrg[openAvrg.length - 1]],
-                        [calculateAverage(closeAvrg), calculateAverage(closeAvrg), closeAvrg[0], closeAvrg[closeAvrg.length - 1]],
-                        [calculateAverage(highAvrg), calculateAverage(highAvrg), highAvrg[0], highAvrg[highAvrg.length - 1]],
-                        [calculateAverage(lowAvrg), calculateAverage(lowAvrg), lowAvrg[0], lowAvrg[lowAvrg.length - 1]]
+                        [calculateAverage(opening), calculateAverage(opening), opening[0], opening[opening.length - 1]],
+                        [calculateAverage(sortClosing), calculateAverage(sortClosing), sortClosing[0], sortClosing[sortClosing.length - 1]],
+                        [calculateAverage(highs), calculateAverage(highs), highs[0], highs[highs.length - 1]],
+                        [calculateAverage(lows), calculateAverage(lows), lows[0], lows[lows.length - 1]]
                     ]
                 }]
             };
@@ -115,7 +152,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         document.querySelector(".container").classList.toggle("chartView");
         document.querySelectorAll(".view2, .view1").forEach(element => element.classList.toggle("hidden"));
     }
-    document.querySelectorAll(".viewChange").forEach(button => button.addEventListener('click', changeViews))
-    // await createChart(companies[1]);
-    await showData(companies[1]);
+    document.querySelectorAll(".viewChange").forEach(button => button.addEventListener('click', changeViews));
+    await showData(companies[0]);
 });
