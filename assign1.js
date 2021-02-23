@@ -129,6 +129,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                 }]
             },
             options: {
+                maintainAspectRatio: false,
                 scales: {
                     yAxes: [{
                         id: "left-y-axis",
