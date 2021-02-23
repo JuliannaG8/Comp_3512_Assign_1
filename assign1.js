@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         data.forEach(stock => total+= stock);
         return (total / data.length);
     }
+    //creating the candlestick chart
     function createCandlestick(stocks) {
         const highs = stocks.map(stock => Number(stock.high));
         highs.sort((a, b) => a < b ? -1 : 1);
@@ -67,6 +68,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         const candleContainer = echarts.init(document.querySelector("#candlestick"));
         candleContainer.setOption(options);
     }
+    //creating the bar chart
     function createBarChart(company) {
         const barContainer = document.querySelector("#columns");
         if (company.hasOwnProperty('financials')) {
@@ -103,6 +105,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             barContainer.getContext("2d").fillText(errorMsg, 1, 50);
         }
     }
+    //creating the line chart
     function createLineChart(stocks) {
         const closing = stocks.map(stock => Number(stock.close));
         const volume = stocks.map(stock => Number(stock.volume));
