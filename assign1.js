@@ -30,17 +30,18 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
     function calculateAverage (data) {
         let total = 0;
-        data.forEach(stock => total+= Number(stock));
+        data.forEach(stock => total+= stock);
         return (total / data.length);
     }
+    //creating the candlestick chart
     function createCandlestick(stocks) {
-        const highs = stocks.map(stock => stock.high);
+        const highs = stocks.map(stock => Number(stock.high));
         highs.sort((a, b) => a < b ? -1 : 1);
-        const opening = stocks.map(stock => stock.open);
+        const opening = stocks.map(stock => Number(stock.open));
         opening.sort((a, b) => a < b ? -1 : 1);
-        const closing = stocks.map(stock => stock.close);
+        const closing = stocks.map(stock => Number(stock.close));
         closing.sort((a, b) => a < b ? -1 : 1);
-        const lows = stocks.map(stock => stock.low);
+        const lows = stocks.map(stock => Number(stock.low));
         lows.sort((a, b) => a < b ? -1 : 1);
         const options = {
             grid: {
@@ -67,6 +68,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         const candleContainer = echarts.init(document.querySelector("#candlestick"));
         candleContainer.setOption(options);
     }
+    //creating the bar chart
     function createBarChart(company) {
         const barContainer = document.querySelector("#columns");
         if (company.hasOwnProperty('financials')) {
@@ -103,6 +105,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             barContainer.getContext("2d").fillText(errorMsg, 1, 50);
         }
     }
+    //creating the line chart
     function createLineChart(stocks) {
         const closing = stocks.map(stock => Number(stock.close));
         const volume = stocks.map(stock => Number(stock.volume));
