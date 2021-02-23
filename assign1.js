@@ -30,17 +30,17 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
     function calculateAverage (data) {
         let total = 0;
-        data.forEach(stock => total+= Number(stock));
+        data.forEach(stock => total+= stock);
         return (total / data.length);
     }
     function createCandlestick(stocks) {
-        const highs = stocks.map(stock => stock.high);
+        const highs = stocks.map(stock => Number(stock.high));
         highs.sort((a, b) => a < b ? -1 : 1);
-        const opening = stocks.map(stock => stock.open);
+        const opening = stocks.map(stock => Number(stock.open));
         opening.sort((a, b) => a < b ? -1 : 1);
-        const closing = stocks.map(stock => stock.close);
+        const closing = stocks.map(stock => Number(stock.close));
         closing.sort((a, b) => a < b ? -1 : 1);
-        const lows = stocks.map(stock => stock.low);
+        const lows = stocks.map(stock => Number(stock.low));
         lows.sort((a, b) => a < b ? -1 : 1);
         const options = {
             grid: {
