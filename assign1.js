@@ -150,6 +150,11 @@ document.addEventListener("DOMContentLoaded", async function () {
         const header = document.querySelector("#nameAndSymbol");
         const description = document.querySelector("#description2");
         header.textContent = `${company.name} Symbol: ${company.symbol}`;
+        description.textContent = company.description;
+        document.querySelector("#speak").addEventListener("click", () => {
+            const utter = new SpeechSynthesisUtterance(company.description);
+            speechSynthesis.speak(utter);
+        });
     }
     async function showData(company) {
         const stockData = await retrieveStocks(company.symbol);
