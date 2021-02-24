@@ -146,6 +146,11 @@ document.addEventListener("DOMContentLoaded", async function () {
             }
         });
     }
+    function altDescribe(company){
+        const header = document.querySelector("#nameAndSymbol");
+        const description = document.querySelector("#description2");
+        header.textContent = `${company.name} Symbol: ${company.symbol}`;
+    }
     async function showData(company) {
         const stockData = await retrieveStocks(company.symbol);
         stockData.sort((a, b) => a.date < b.date ? -1 : 1);
@@ -153,7 +158,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         createBarChart(company);
         createLineChart(stockData);
         createCandlestick(stockData);
-
+        altDescribe(company);
     }
     function changeViews() {
         document.querySelector(".container").classList.toggle("chartView");
