@@ -3,8 +3,11 @@ document.addEventListener("DOMContentLoaded", async function () {
         function retrieveStorage() {
             return JSON.parse(localStorage.getItem("companies")) || [];
         }
+        const loading = document.querySelector("#loader1");
+        loading.classList.toggle("hidden");
         let storage = retrieveStorage();
         if (storage.length > 0) {
+            loading.classList.toggle("hidden");
             return storage;
         }
         try {
@@ -14,15 +17,20 @@ document.addEventListener("DOMContentLoaded", async function () {
         } catch (e) {
             console.error(e);
         }
+        loading.classList.toggle("hidden");
         return storage;
     }
     const companies = await loadAndStore();
     console.log(companies);
 
     async function retrieveStocks(symbol) {
+
         try {
+            const loading = document.querySelector("#loader2");
+            loading.classList.toggle("hidden");
             const response = await fetch(`http://www.randyconnolly.com/funwebdev/3rd/api/stocks/history.php?symbol=${symbol}`);
             const stocks = await response.json();
+            loading.classList.toggle("hidden");
             return stocks;
         } catch (e) {
             console.error(e);
@@ -180,6 +188,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
     async function showData(company) {
         const stockData = await retrieveStocks(company.symbol);
+
         stockData.sort((a, b) => a.date < b.date ? -1 : 1);
         console.log(company, stockData);
         createBarChart(company);
@@ -194,4 +203,14 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
     document.querySelectorAll(".viewChange").forEach(button => button.addEventListener('click', changeViews));
     await showData(companies[0]);
+    let timer;
+    function showCredits() {
+        clearTimeout(timer);
+        document.querySelector("span.tooltiptext").style.visibility = "visible";
+        timer = setTimeout(() => {
+            document.querySelector("span.tooltiptext").style.visibility = "hidden";
+        }, 5000);
+    }
+    document.querySelector("#Credits").addEventListener("mouseover", showCredits);
+
 });

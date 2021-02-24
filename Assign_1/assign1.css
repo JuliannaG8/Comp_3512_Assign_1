@@ -8,11 +8,14 @@
     background-color: #ccccff;
     padding: 10px;
 }
+strong{font-size: xx-large;}
 #companies {
     grid-column: 1 / span 1;
     grid-row: 1 / span 4;
 }
-
+img#Credits{
+    height: 50px;
+}
 #information {
     grid-column: 2 / span 1;
     grid-row: 1 / span 2;
@@ -51,8 +54,14 @@
     /*margin: 0 auto;*/
 }
 
-.loading, .hidden {
+.hidden {
     display: none !important;
+}
+.tooltiptext{
+    position: absolute;
+    z-index: 1;
+    visibility: hidden;
+    background-color: #889ddd;
 }
 .chartView {
     display: grid;
