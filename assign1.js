@@ -156,6 +156,28 @@ document.addEventListener("DOMContentLoaded", async function () {
             speechSynthesis.speak(utter);
         });
     }
+    function displayInfo(company) {
+        function displayLogo(){
+            const url = `logos/logos/${company.symbol}.svg`;
+            const logo = document.querySelector("#logo");
+            logo.setAttribute("src", url);
+            logo.setAttribute("alt", company.name);
+        }
+        function showSite() {
+            const href = document.querySelector("#site");
+            href.setAttribute("href", company.website);
+            href.textContent = company.website;
+        }
+        displayLogo();
+        showSite();
+        document.querySelector("#companyName").textContent = company.name;
+        document.querySelector("#description1").textContent = company.description;
+        document.querySelector("#address").textContent = company.address;
+        document.querySelector("#symbol").textContent = company.symbol;
+        document.querySelector("#sector").textContent = company.sector;
+        document.querySelector("#subIndustry").textContent = company.subindustry;
+        document.querySelector("#exchange").textContent = company.exchange;
+    }
     async function showData(company) {
         const stockData = await retrieveStocks(company.symbol);
         stockData.sort((a, b) => a.date < b.date ? -1 : 1);
@@ -164,6 +186,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         createLineChart(stockData);
         createCandlestick(stockData);
         altDescribe(company);
+        displayInfo(company);
     }
     function changeViews() {
         document.querySelector(".container").classList.toggle("chartView");
