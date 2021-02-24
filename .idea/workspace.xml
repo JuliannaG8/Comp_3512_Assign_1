@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="06c8d5cd-53a7-498b-b34e-13fef51f6679" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Assignments.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Comp_3512_Assign_1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assign_1/assign1.css" beforeDir="false" afterPath="$PROJECT_DIR$/Assign_1/assign1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assign_1/assign1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assign_1/assign1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assign_1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Assign_1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assign_1/laptop.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assign_1/laptop.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comp_3512_Assign_1" beforeDir="false" afterPath="$PROJECT_DIR$/Comp_3512_Assign_1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assign1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assign1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/._logos" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._A.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._AAP.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._AAPL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._ABC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._ABT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._ACN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._ADBE.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._ADI.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._ADM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._ADP.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._ADS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._ADSK.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._AEP.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._AES.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._AFL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._AIG.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._AIZ.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._AJG.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._AKAM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._ALL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._ALXN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._AMAT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._AMD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._AME.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._AMGN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._AMT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._AMZN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._AON.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._AOS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._APA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._APC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._APH.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._ATVI.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._AVGO.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._AWK.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._AXP.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._AYI.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._BA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._BAC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._BAX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._BBT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._BBY.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._BF.B.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._BIIB.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._BK.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._BLK.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._BLL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._BMY.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._BRK.B.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._BWA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._C.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._CA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._CAH.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._CAT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._CB.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._CBG.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._CBS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._CCL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._CDNS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._CHD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._CHTR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._CI.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._CMG.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._CNC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._CNP.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._COF.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._CPB.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._CRM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._CSCO.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._CTAS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._CTL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._CTXS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._CVX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._D.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._DAL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._DG.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._DIS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._DISCA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._DISH.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._DPS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._DRI.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._DUK.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._DVN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._EA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._EBAY.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._ECL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._ED.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._EFX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._EIX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._EMN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._EMR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._EQIX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._ESRX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._ETFC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._ETN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._ETR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._EXC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._EXPE.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._F.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._FB.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._FCX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._FDX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._FE.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._FFIV.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._FIS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._FITB.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._FL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._FLR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._GD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._GE.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._GIS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._GM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._GOOG.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._GOOGL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._GPS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._GRMN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._GS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._GT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._HAL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._HD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._HES.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._HOG.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._HPE.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._HPQ.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._HSY.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._IBM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._INTC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._INTU.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._IP.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._IQV.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._IT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._JCI.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._JNJ.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._JNPR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._JPM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._K.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._KHC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._KMB.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._KMX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._L.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._LMT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._LNC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._LOW.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._MA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._MAR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._MAT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._MCD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._MET.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._MMM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._MO.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._MON.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._MS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._MSFT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._MU.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._NDAQ.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._NFLX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._NKE.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._NSC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._NTAP.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._NVDA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._NWL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._ORCL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._ORLY.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._PCLN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._PEP.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._PFE.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._PG.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._PGR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._PKI.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._PM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._PPL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._PSX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._PYPL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._QCOM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._RHT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._ROK.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._SBUX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._SHW.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._SLB.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._SNA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._SO.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._STI.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._STT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._STX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._SYMC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._SYY.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._T.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._TAP.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._TGT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._TIF.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._TPR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._TRIP.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._TWX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._TXN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._UA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._UNP.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._USB.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._UTX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._V.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._VIAB.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._VZ.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._WBA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._WDC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._WFC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._WHR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._WM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._WMB.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._WMT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._WY.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._WYN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._WYNN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._XEL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._XL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._XOM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._XRAY.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._YUM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/__MACOSX/logos/._ZION.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/A.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/AAP.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/AAPL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/ABC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/ABT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/ACN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/ADBE.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/ADI.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/ADM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/ADP.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/ADS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/ADSK.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/AEP.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/AES.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/AFL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/AIG.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/AIZ.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/AJG.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/AKAM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/ALL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/ALXN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/AMAT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/AMD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/AME.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/AMGN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/AMT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/AMZN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/AON.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/AOS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/APA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/APC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/APH.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/ATVI.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/AVGO.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/AWK.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/AXP.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/AYI.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/BA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/BAC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/BAX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/BBT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/BBY.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/BF.B.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/BIIB.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/BK.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/BLK.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/BLL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/BMY.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/BRK.B.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/BWA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/C.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/CA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/CAH.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/CAT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/CB.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/CBG.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/CBS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/CCL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/CDNS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/CHD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/CHTR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/CI.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/CMG.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/CNC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/CNP.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/COF.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/CPB.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/CRM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/CSCO.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/CTAS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/CTL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/CTXS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/CVX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/D.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/DAL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/DG.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/DIS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/DISCA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/DISH.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/DPS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/DRI.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/DUK.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/DVN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/EA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/EBAY.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/ECL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/ED.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/EFX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/EIX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/EMN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/EMR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/EQIX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/ESRX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/ETFC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/ETN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/ETR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/EXC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/EXPE.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/F.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/FB.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/FCX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/FDX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/FE.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/FFIV.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/FIS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/FITB.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/FL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/FLR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/GD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/GE.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/GIS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/GM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/GOOG.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/GOOGL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/GPS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/GRMN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/GS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/GT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/HAL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/HD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/HES.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/HOG.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/HPE.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/HPQ.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/HSY.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/IBM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/INTC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/INTU.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/IP.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/IQV.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/IT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/JCI.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/JNJ.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/JNPR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/JPM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/K.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/KHC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/KMB.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/KMX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/L.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/LMT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/LNC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/LOW.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/MA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/MAR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/MAT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/MCD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/MET.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/MMM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/MO.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/MON.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/MS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/MSFT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/MU.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/NDAQ.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/NFLX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/NKE.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/NSC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/NTAP.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/NVDA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/NWL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/ORCL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/ORLY.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/PCLN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/PEP.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/PFE.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/PG.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/PGR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/PKI.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/PM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/PPL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/PSX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/PYPL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/QCOM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/RHT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/ROK.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/SBUX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/SHW.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/SLB.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/SNA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/SO.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/STI.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/STT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/STX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/SYMC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/SYY.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/T.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/TAP.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/TGT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/TIF.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/TPR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/TRIP.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/TWX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/TXN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/UA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/UNP.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/USB.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/UTX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/V.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/VIAB.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/VZ.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/WBA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/WDC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/WFC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/WHR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/WM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/WMB.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/WMT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/WY.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/WYN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/WYNN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/XEL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/XL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/XOM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/XRAY.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/YUM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/logos/ZION.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/w2021-assign1" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$/Comp_3512_Assign_1" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1ouFnFD0vtZFTapJTa5m7V1JmDS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Labs" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="06c8d5cd-53a7-498b-b34e-13fef51f6679" name="Default Changelist" comment="" />
+      <created>1614128737477</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614128737477</updated>
+      <workItem from="1614128740172" duration="2387000" />
+      <workItem from="1614190175587" duration="9467000" />
+    </task>
+    <task id="LOCAL-00001" summary="need to commit">
+      <created>1614128863432</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1614128863432</updated>
+    </task>
+    <task id="LOCAL-00002" summary="WHY IS THIS SO CONFUSING">
+      <created>1614129167659</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1614129167659</updated>
+    </task>
+    <task id="LOCAL-00003" summary="display name and symbol">
+      <created>1614129652583</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1614129652583</updated>
+    </task>
+    <task id="LOCAL-00004" summary="display name and symbol">
+      <created>1614132856728</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1614132856728</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added speech synthesis">
+      <created>1614190470615</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1614190470615</updated>
+    </task>
+    <task id="LOCAL-00006" summary="view1 company information now shows the selected company's info, unzipped the logo folder">
+      <created>1614192597393</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1614192597393</updated>
+    </task>
+    <task id="LOCAL-00007" summary="moved stuff around">
+      <created>1614193252447</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1614193252447</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/speech-synth" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="need to commit" />
+    <MESSAGE value="WHY IS THIS SO CONFUSING" />
+    <MESSAGE value="display name and symbol" />
+    <MESSAGE value="added speech synthesis" />
+    <MESSAGE value="view1 company information now shows the selected company's info, unzipped the logo folder" />
+    <MESSAGE value="moved stuff around" />
+    <option name="LAST_COMMIT_MESSAGE" value="moved stuff around" />
+  </component>
+</project>
