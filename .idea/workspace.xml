@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06c8d5cd-53a7-498b-b34e-13fef51f6679" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Comp_3512_Assign_1" beforeDir="false" />
-    </list>
+    <list default="true" id="06c8d5cd-53a7-498b-b34e-13fef51f6679" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614208950369</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="reorganizing">
+      <created>1614209445951</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1614209445951</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
