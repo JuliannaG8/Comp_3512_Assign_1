@@ -198,6 +198,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
     document.querySelectorAll(".viewChange").forEach(button => button.addEventListener('click', changeViews));
     await showData(companies[0]);
+    
     let timer;
     function showCredits() {
         clearTimeout(timer);
