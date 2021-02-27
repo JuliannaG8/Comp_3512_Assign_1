@@ -198,4 +198,13 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
     document.querySelectorAll(".viewChange").forEach(button => button.addEventListener('click', changeViews));
     await showData(companies[0]);
+    let timer;
+    function showCredits() {
+        clearTimeout(timer);
+        document.querySelector("span.tooltiptext").style.visibility = "visible";
+        timer = setTimeout(() => {
+            document.querySelector("span.tooltiptext").style.visibility = "hidden";
+        }, 5000);
+    }
+    document.querySelector("#Credits").addEventListener("mouseover", showCredits);
 });
