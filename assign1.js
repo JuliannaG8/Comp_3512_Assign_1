@@ -197,12 +197,50 @@ document.addEventListener("DOMContentLoaded", async function () {
         altDescribe(company);
         displayInfo(company);
     }
+
+
+
+
+//ADDED HERE
+    //creating the Table 
+    function createTableData(stocks) {
+
+        const highs = stocks.financials(stock => Number(stock.high));
+        highs.sort((a, b) => a < b ? -1 : 1);
+        const opening = stocks.financials(stock => Number(stock.open));
+        opening.sort((a, b) => a < b ? -1 : 1);
+        const closing = stocks.financials(stock => Number(stock.close));
+        closing.sort((a, b) => a < b ? -1 : 1);
+        const lows = stocks.financials(stock => Number(stock.low));
+        lows.sort((a, b) => a < b ? -1 : 1);
+        const options = {
+            grid: {
+                height: "80%",
+                width: "90%",
+                bottom: "15%"
+            },
+            xAxis: {
+                data: ['open', 'close', 'high', 'low']
+            },
+            },
+        };
+
+
+
+
+
+
+
+
+
+
     function changeViews() {
         document.querySelector(".container").classList.toggle("chartView");
         document.querySelectorAll(".view2, .view1").forEach(element => element.classList.toggle("hidden"));
     }
     document.querySelectorAll(".viewChange").forEach(button => button.addEventListener('click', changeViews));
     await showData(companies[0]);
+  
     let timer;
     function showCredits() {
         clearTimeout(timer);
@@ -212,5 +250,4 @@ document.addEventListener("DOMContentLoaded", async function () {
         }, 5000);
     }
     document.querySelector("#Credits").addEventListener("mouseover", showCredits);
-
 });
