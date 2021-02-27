@@ -8,8 +8,20 @@
 <body>
 <header>
     <!--will add picture later-->
-    <img id="Credits" name="credits" src="">
-    <h1>COMP 3512 Assign1</h1>
+
+    <span>
+        <span class="tooltip"><img id="Credits" alt="credits" src="laptop.png">
+            <span class="tooltiptext">
+                <p>Julianna and Zaid Khusro</p>
+                <p>COMP 3512 Web Dev 2</p>
+                <ul>
+                    Third Parties:
+                    <li>Google Maps API</li>
+                    <li>Chart.js</li>
+                    <li>echarts</li>
+                    <li>loading.io for gif and icon</li>
+                </ul>
+            </span></span> <strong>COMP 3512 Assign1</strong></span>
 </header>
 <!--figured using a flex box would be the best way to create the layout-->
 <main class="container">
@@ -21,21 +33,21 @@
             <button type="reset" id="reset">Clear</button>
         </p>
         <div class="box" id="list-container">
-            <div class="loading" id="loader1"></div> <!--placeholder for loading animation-->
+            <img class="loading hidden" id="loader1" src="Infinity-1s-200px.gif"><!--placeholder for loading animation-->
             <ul id="company-list"></ul>
         </div>
     </div>
     <div class="box" id="information">
         <h3 class="view1">Company Information</h3>
         <section class="hidden view2">
-        <h4 id="nameAndSymbol">Sample</h4>
-        <p id="description2">Sample <button type="button" id="speak">Speak</button></p>
+        <h4 id="nameAndSymbol"></h4>
+            <p><span id="description2"></span> <button type="button" id="speak">Speak</button></p>
             <button type="button" class="viewChange" id="close">Close</button>
         </section>
         <section class="view1 info-flex"> <!--using anouther flex box for the company information, maybe change the order of things down the line-->
-            <img src="" id="logo">
-            <h4 id="companyName">Sample</h4>
-            <p id="description1">Sample</p>
+            <img src="" alt="" id="logo">
+            <h4 id="companyName"></h4>
+            <p id="description1"></p>
             <label>Address:</label>
             <span id="address"></span>
             <label>Site:</label>
@@ -51,7 +63,7 @@
         </section>
     </div>
     <div class="box" id="data">
-        <div class="loading" id="loader2"></div>
+        <img class="loading hidden" id="loader2" src="Infinity-1s-200px.gif">
         <h3 class="view1">Stock Data: <button type="button" class="viewChange">View Charts</button></h3>
         <h3 class="hidden view2">Charts</h3>
         <div class="view1" id="stockDetails"></div>

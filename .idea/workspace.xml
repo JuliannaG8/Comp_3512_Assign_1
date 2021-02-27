@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="06c8d5cd-53a7-498b-b34e-13fef51f6679" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$/Comp_3512_Assign_1" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1ouFnFD0vtZFTapJTa5m7V1JmDS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Labs" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="06c8d5cd-53a7-498b-b34e-13fef51f6679" name="Default Changelist" comment="" />
+      <created>1614128737477</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614128737477</updated>
+      <workItem from="1614128740172" duration="2387000" />
+      <workItem from="1614190175587" duration="2898000" />
+    </task>
+    <task id="LOCAL-00001" summary="need to commit">
+      <created>1614128863432</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1614128863432</updated>
+    </task>
+    <task id="LOCAL-00002" summary="WHY IS THIS SO CONFUSING">
+      <created>1614129167659</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1614129167659</updated>
+    </task>
+    <task id="LOCAL-00003" summary="display name and symbol">
+      <created>1614129652583</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1614129652583</updated>
+    </task>
+    <task id="LOCAL-00004" summary="display name and symbol">
+      <created>1614132856728</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1614132856728</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added speech synthesis">
+      <created>1614190470615</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1614190470615</updated>
+    </task>
+    <task id="LOCAL-00006" summary="view1 company information now shows the selected company's info, unzipped the logo folder">
+      <created>1614192597393</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1614192597393</updated>
+    </task>
+    <task id="LOCAL-00007" summary="reorganizing">
+      <created>1614208866723</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1614208866723</updated>
+    </task>
+    <task id="LOCAL-00008" summary="reorganizing">
+      <created>1614208950369</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1614208950369</updated>
+    </task>
+    <task id="LOCAL-00009" summary="reorganizing">
+      <created>1614209445951</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1614209445951</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/speech-synth" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="need to commit" />
+    <MESSAGE value="WHY IS THIS SO CONFUSING" />
+    <MESSAGE value="display name and symbol" />
+    <MESSAGE value="added speech synthesis" />
+    <MESSAGE value="view1 company information now shows the selected company's info, unzipped the logo folder" />
+    <MESSAGE value="reorganizing" />
+    <option name="LAST_COMMIT_MESSAGE" value="reorganizing" />
+  </component>
+</project>
