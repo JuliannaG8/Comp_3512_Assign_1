@@ -106,3 +106,6 @@ img#Credits{
 canvas {
     background-color: white;
 }
+ul li {
+    list-style: none;
+}

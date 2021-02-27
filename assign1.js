@@ -1,14 +1,10 @@
 document.addEventListener("DOMContentLoaded", async function () {
     const companiesURL = "http://www.randyconnolly.com/funwebdev/3rd/api/stocks/companies.php";
 
-    document.querySelector('.box').style.display = "inline-block";
-    const mainContent = document.querySelectorAll('.companies');
-    for (let m of mainContent) {
-        m.style.display = "none";
-    }
+    const mainContent = document.querySelector('#company-list');
 
-    async function loadAndStore() {
-        function retrieveStorage() {
+    async function loadAndStore() {//function to retrieve data, either from local storage or from API
+        function retrieveStorage() {//checking to see if the companies data is already in local storage
             return JSON.parse(localStorage.getItem("companies")) || [];
         }
         const loading = document.querySelector("#loader1");
@@ -230,8 +226,8 @@ document.addEventListener("DOMContentLoaded", async function () {
             xAxis: {
                 data: ['open', 'close', 'high', 'low']
             },
-            },
-        };
+            };
+        }
 
 
 
