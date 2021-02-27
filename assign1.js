@@ -1,4 +1,12 @@
 document.addEventListener("DOMContentLoaded", async function () {
+    const companiesURL = "http://www.randyconnolly.com/funwebdev/3rd/api/stocks/companies.php";
+
+    document.querySelector('.box').style.display = "inline-block";
+    const mainContent = document.querySelectorAll('.companies');
+    for (let m of mainContent) {
+        m.style.display = "none";
+    }
+
     async function loadAndStore() {
         function retrieveStorage() {
             return JSON.parse(localStorage.getItem("companies")) || [];
