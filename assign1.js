@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async function () {
-    const companiesURL = "http://www.randyconnolly.com/funwebdev/3rd/api/stocks/companies.php";
+    const companiesURL = "https://www.randyconnolly.com/funwebdev/3rd/api/stocks/companies.php";
 
     const mainContent = document.querySelector('#company-list');
 
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             return storage;
         }
         try {
-            const response = await fetch("http://www.randyconnolly.com/funwebdev/3rd/api/stocks/companies.php");
+            const response = await fetch("https://www.randyconnolly.com/funwebdev/3rd/api/stocks/companies.php");
             storage = await response.json();
             localStorage.setItem("companies", JSON.stringify(storage));
         } catch (e) {
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         try {
             const loading = document.querySelector("#loader2");
             loading.classList.toggle("hidden");
-            const response = await fetch(`http://www.randyconnolly.com/funwebdev/3rd/api/stocks/history.php?symbol=${symbol}`);
+            const response = await fetch(`https://www.randyconnolly.com/funwebdev/3rd/api/stocks/history.php?symbol=${symbol}`);
             const stocks = await response.json();
             loading.classList.toggle("hidden");
             return stocks;
@@ -208,10 +208,10 @@ document.addEventListener("DOMContentLoaded", async function () {
 //ADDED HERE
     //creating the Table 
     function createTableData(company) {
-        if (company.hasOwnProperty('financials')) {
+        const table = document.querySelector("#financial-table");
+        table.innerHTML = "";//emptying table
+        if (company.hasOwnProperty('financials')) {//checking to see if financial data exists
             const financial = company.financials;
-            const table = document.querySelector("#financial-table");
-            table.innerHTML = "";
             const year = document.createElement("th");
             const revenue = document.createElement("th");
             const earnings = document.createElement("th");
@@ -232,8 +232,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             earnRow.appendChild(earnings);
             assetRow.appendChild(assets);
             liableRow.appendChild(liabilities);
-
-            for (let i = 0; i < financial.years.length; i++) {
+            for (let i = 0; i < financial.years.length; i++) {//looping through financial arrays to create td elements
                 const curYear = document.createElement("td");
                 const curRev = document.createElement("td");
                 const curEarn = document.createElement("td");
@@ -251,7 +250,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                 liableRow.appendChild(curLiable);
             }
             table.append(yearRow,revRow,earnRow,assetRow,liableRow);
-        } else {
+        } else {//outputting error message if financial data does not exist
             const errorMsg = `${company.name} does not have stored financial data`;
             document.querySelector("#financials").appendChild(errorMsg);
         }
