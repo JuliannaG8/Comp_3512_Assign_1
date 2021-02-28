@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06c8d5cd-53a7-498b-b34e-13fef51f6679" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assign1.js" beforeDir="false" afterPath="$PROJECT_DIR$/assign1.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +46,7 @@
       <updated>1614128737477</updated>
       <workItem from="1614128740172" duration="2387000" />
       <workItem from="1614190175587" duration="2898000" />
-      <workItem from="1614467044782" duration="6341000" />
+      <workItem from="1614467044782" duration="7262000" />
     </task>
     <task id="LOCAL-00001" summary="need to commit">
       <created>1614128863432</created>
@@ -126,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614471795293</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Heard back from Randy, HTTPS certificates have been restored and links altered">
+      <created>1614473791325</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1614473791325</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,6 +171,7 @@
     <MESSAGE value="reorganizing" />
     <MESSAGE value="removed unnecassary code and added some comments" />
     <MESSAGE value="created stock chart, formatted numbers, and resized view2 columns" />
-    <option name="LAST_COMMIT_MESSAGE" value="created stock chart, formatted numbers, and resized view2 columns" />
+    <MESSAGE value="Heard back from Randy, HTTPS certificates have been restored and links altered" />
+    <option name="LAST_COMMIT_MESSAGE" value="Heard back from Randy, HTTPS certificates have been restored and links altered" />
   </component>
 </project>

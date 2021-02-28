@@ -40,10 +40,10 @@ document.addEventListener("DOMContentLoaded", async function () {
             console.error(e);
         }
     }
-    function calculateAverage (data) {
+    function calculateAverage (stocks) {
         let total = 0;
-        data.forEach(stock => total+= stock);
-        return (total / data.length);
+        stocks.forEach(stock => total+= stock);
+        return (total / stocks.length);
     }
     //creating the candlestick chart
     function createCandlestick(stocks) {
@@ -192,7 +192,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
     async function showData(company) {
         const stockData = await retrieveStocks(company.symbol);
-
         stockData.sort((a, b) => a.date < b.date ? -1 : 1);
         console.log(company, stockData);
         createBarChart(company);
@@ -200,14 +199,14 @@ document.addEventListener("DOMContentLoaded", async function () {
         createCandlestick(stockData);
         altDescribe(company);
         displayInfo(company);
-        createTableData(company);
+        financialsTable(company);
     }
     function currency (num) {
         return new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(num);
     }
 //ADDED HERE
-    //creating the Table 
-    function createTableData(company) {
+    //creating the Financials Table
+    function financialsTable(company) {
         const table = document.querySelector("#financial-table");
         table.innerHTML = "";//emptying table
         if (company.hasOwnProperty('financials')) {//checking to see if financial data exists
