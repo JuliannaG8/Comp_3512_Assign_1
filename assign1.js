@@ -40,21 +40,27 @@ document.addEventListener("DOMContentLoaded", async function () {
             console.error(e);
         }
     }
-    function calculateAverage (stocks) {
+    function calculateAverage (numArray) {
         let total = 0;
-        stocks.forEach(stock => total+= stock);
-        return (total / stocks.length);
+        numArray.forEach(num => total+= num);
+        return (total / numArray.length);
     }
+    function getMinMaxAvgOfStocks(stocks,stockAttribute) {
+        const stockAttributeArray = stocks.map(stock => parseFloat(stock[stockAttribute]));
+        stockAttributeArray.sort((a, b) => a < b ? -1 : 1);
+        const avg = calculateAverage(stockAttributeArray);
+        return {
+            min: stockAttributeArray[0],
+            max: stockAttributeArray[stockAttributeArray.length - 1],
+            avg
+        }
+    }
+
     //creating the candlestick chart
     function createCandlestick(stocks) {
-        const highs = stocks.map(stock => Number(stock.high));
-        highs.sort((a, b) => a < b ? -1 : 1);
-        const opening = stocks.map(stock => Number(stock.open));
-        opening.sort((a, b) => a < b ? -1 : 1);
-        const closing = stocks.map(stock => Number(stock.close));
-        closing.sort((a, b) => a < b ? -1 : 1);
-        const lows = stocks.map(stock => Number(stock.low));
-        lows.sort((a, b) => a < b ? -1 : 1);
+        function convertMinMaxAvgToCandlestickData({min,max,avg}) {
+            return [avg, avg, min, max];
+        }
         const options = {
             grid: {
                 height: "80%",
@@ -70,10 +76,10 @@ document.addEventListener("DOMContentLoaded", async function () {
             series: [{
                 type: 'candlestick',
                 data: [
-                    [calculateAverage(opening), calculateAverage(opening), opening[0], opening[opening.length - 1]],
-                    [calculateAverage(closing), calculateAverage(closing), closing[0], closing[closing.length - 1]],
-                    [calculateAverage(highs), calculateAverage(highs), highs[0], highs[highs.length - 1]],
-                    [calculateAverage(lows), calculateAverage(lows), lows[0], lows[lows.length - 1]]
+                    convertMinMaxAvgToCandlestickData(getMinMaxAvgOfStocks(stocks,"open")),
+                    convertMinMaxAvgToCandlestickData(getMinMaxAvgOfStocks(stocks,"close")),
+                    convertMinMaxAvgToCandlestickData(getMinMaxAvgOfStocks(stocks,"high")),
+                    convertMinMaxAvgToCandlestickData(getMinMaxAvgOfStocks(stocks,"low"))
                 ]
             }]
         };
@@ -87,7 +93,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             const barChart = new Chart(barContainer, {
                 type: "bar",
                 data: {
-                    labels: [2019, 2018, 2017],
+                    labels: company.financials.years,
                     datasets: [
                         {
                             label: "Revenue",
@@ -121,11 +127,13 @@ document.addEventListener("DOMContentLoaded", async function () {
     function createLineChart(stocks) {
         const closing = stocks.map(stock => Number(stock.close));
         const volume = stocks.map(stock => Number(stock.volume));
+        const dates = stocks.map(stock => stock.date);
+
         const lineContainer = document.querySelector("#line");
         const lineChart = new Chart(lineContainer, {
             type: "line",
             data: {
-                labels: ["2019-01-02", "2019-01-16", "2019-02-01", "2019-02-14", "2019-03-01", "2019-03-15", "2019-03-28"],
+                labels: dates,
                 datasets: [{
                     data: closing,
                     label: "closing",
@@ -147,12 +155,29 @@ document.addEventListener("DOMContentLoaded", async function () {
                         id: "left-y-axis",
                         type: 'linear',
                         position: "left",
-                        label: "closing values"
+                        label: "closing values",
+                        ticks: {
+                            autoSkip: false,
+                            maxTicksLimit: 5
+                        }
                     }, {
                         id: "right-y-axis",
                         type: "linear",
                         position: "right",
-                        label: "volume values"
+                        label: "volume values",
+                        ticks: {
+                            autoSkip: false,
+                            maxTicksLimit: 5
+                        }
+                    }],
+                    //advice on ticks from
+                    //https://stackoverflow.com/questions/22064577/limit-labels-number-on-chart-js-line-chart
+                    xAxes: [{
+                        ticks: {
+                            autoSkip: true,
+                            maxTicksLimit: 10
+                        }
+
                     }]
                 }
             }
@@ -201,7 +226,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         displayInfo(company);
         financialsTable(company);
     }
-    function currency (num) {
+    function formatCurrency (num) {
         return new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(num);
     }
 //ADDED HERE
@@ -225,10 +250,10 @@ document.addEventListener("DOMContentLoaded", async function () {
             }
             const {years, revenue, earnings, assets, liabilities}=company.financials;
             const yearRow = buildRow(years,"Year");
-            const revRow = buildRow(revenue,"Revenue",currency);
-            const earnRow = buildRow(earnings,"Earnings",currency);
-            const assetRow = buildRow(assets,"Assets",currency);
-            const liableRow = buildRow(liabilities,"Liabilities",currency);
+            const revRow = buildRow(revenue,"Revenue",formatCurrency);
+            const earnRow = buildRow(earnings,"Earnings",formatCurrency);
+            const assetRow = buildRow(assets,"Assets",formatCurrency);
+            const liableRow = buildRow(liabilities,"Liabilities",formatCurrency);
             table.append(yearRow,revRow,earnRow,assetRow,liableRow);
         } else {//outputting error message if financial data does not exist
             const errorMsg = `${company.name} does not have stored financial data`;
