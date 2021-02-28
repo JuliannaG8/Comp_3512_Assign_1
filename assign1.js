@@ -222,8 +222,8 @@ document.addEventListener("DOMContentLoaded", async function () {
             xAxis: {
                 data: ['open', 'close', 'high', 'low']
             },
-            },
-        };
+            };
+        }
 
 
 
