@@ -206,48 +206,29 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 //ADDED HERE
     //creating the Financials Table
+
     function financialsTable(company) {
         const table = document.querySelector("#financial-table");
         table.innerHTML = "";//emptying table
         if (company.hasOwnProperty('financials')) {//checking to see if financial data exists
-            const financial = company.financials;
-            const year = document.createElement("th");
-            const revenue = document.createElement("th");
-            const earnings = document.createElement("th");
-            const assets = document.createElement("th");
-            const liabilities = document.createElement("th");
-            const yearRow = document.createElement("tr");
-            const revRow = document.createElement("tr");
-            const earnRow = document.createElement("tr");
-            const assetRow = document.createElement("tr");
-            const liableRow = document.createElement("tr");
-            year.textContent = "Year";
-            revenue.textContent = "Revenue";
-            earnings.textContent = "Earnings";
-            assets.textContent = "Assets";
-            liabilities.textContent = "Liabilities";
-            yearRow.appendChild(year);
-            revRow.appendChild(revenue);
-            earnRow.appendChild(earnings);
-            assetRow.appendChild(assets);
-            liableRow.appendChild(liabilities);
-            for (let i = 0; i < financial.years.length; i++) {//looping through financial arrays to create td elements
-                const curYear = document.createElement("td");
-                const curRev = document.createElement("td");
-                const curEarn = document.createElement("td");
-                const curAsset = document.createElement("td");
-                const curLiable = document.createElement("td");
-                curYear.textContent = financial.years[i];
-                curRev.textContent = currency(financial.revenue[i]);
-                curEarn.textContent = currency(financial.earnings[i]);
-                curAsset.textContent = currency(financial.assets[i]);
-                curLiable.textContent = currency(financial.liabilities[i]);
-                yearRow.appendChild(curYear);
-                revRow.appendChild(curRev);
-                earnRow.appendChild(curEarn);
-                assetRow.appendChild(curAsset);
-                liableRow.appendChild(curLiable);
+            function buildRow(rowData,rowLabel,formatter= (b)=>b) {
+                const rowElement = document.createElement("tr");
+                const labelElement = document.createElement("th");
+                labelElement.textContent = rowLabel;
+                rowElement.appendChild(labelElement);
+                rowData.forEach(data => {
+                    const dataElement = document.createElement("td");
+                    dataElement.textContent = formatter(data);
+                    rowElement.appendChild(dataElement);
+                });
+                return rowElement;
             }
+            const {years, revenue, earnings, assets, liabilities}=company.financials;
+            const yearRow = buildRow(years,"Year");
+            const revRow = buildRow(revenue,"Revenue",currency);
+            const earnRow = buildRow(earnings,"Earnings",currency);
+            const assetRow = buildRow(assets,"Assets",currency);
+            const liableRow = buildRow(liabilities,"Liabilities",currency);
             table.append(yearRow,revRow,earnRow,assetRow,liableRow);
         } else {//outputting error message if financial data does not exist
             const errorMsg = `${company.name} does not have stored financial data`;
