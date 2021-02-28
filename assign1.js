@@ -4,11 +4,11 @@ document.addEventListener("DOMContentLoaded", async function () {
     const mainContent = document.querySelector('#company-list');
 
     async function loadAndStore() {//function to retrieve data, either from local storage or from API
+        const loading = document.querySelector("#loader1");
+        loading.classList.toggle("hidden");
         function retrieveStorage() {//checking to see if the companies data is already in local storage
             return JSON.parse(localStorage.getItem("companies")) || [];
         }
-        const loading = document.querySelector("#loader1");
-        loading.classList.toggle("hidden");
         let storage = retrieveStorage();
         if (storage.length > 0) {
             loading.classList.toggle("hidden");
@@ -200,43 +200,62 @@ document.addEventListener("DOMContentLoaded", async function () {
         createCandlestick(stockData);
         altDescribe(company);
         displayInfo(company);
+        createTableData(company);
     }
-
-
-
-
+    function currency (num) {
+        return new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(num);
+    }
 //ADDED HERE
     //creating the Table 
-    function createTableData(stocks) {
+    function createTableData(company) {
+        if (company.hasOwnProperty('financials')) {
+            const financial = company.financials;
+            const table = document.querySelector("#financial-table");
+            table.innerHTML = "";
+            const year = document.createElement("th");
+            const revenue = document.createElement("th");
+            const earnings = document.createElement("th");
+            const assets = document.createElement("th");
+            const liabilities = document.createElement("th");
+            const yearRow = document.createElement("tr");
+            const revRow = document.createElement("tr");
+            const earnRow = document.createElement("tr");
+            const assetRow = document.createElement("tr");
+            const liableRow = document.createElement("tr");
+            year.textContent = "Year";
+            revenue.textContent = "Revenue";
+            earnings.textContent = "Earnings";
+            assets.textContent = "Assets";
+            liabilities.textContent = "Liabilities";
+            yearRow.appendChild(year);
+            revRow.appendChild(revenue);
+            earnRow.appendChild(earnings);
+            assetRow.appendChild(assets);
+            liableRow.appendChild(liabilities);
 
-        const highs = stocks.financials(stock => Number(stock.high));
-        highs.sort((a, b) => a < b ? -1 : 1);
-        const opening = stocks.financials(stock => Number(stock.open));
-        opening.sort((a, b) => a < b ? -1 : 1);
-        const closing = stocks.financials(stock => Number(stock.close));
-        closing.sort((a, b) => a < b ? -1 : 1);
-        const lows = stocks.financials(stock => Number(stock.low));
-        lows.sort((a, b) => a < b ? -1 : 1);
-        const options = {
-            grid: {
-                height: "80%",
-                width: "90%",
-                bottom: "15%"
-            },
-            xAxis: {
-                data: ['open', 'close', 'high', 'low']
-            },
-            };
+            for (let i = 0; i < financial.years.length; i++) {
+                const curYear = document.createElement("td");
+                const curRev = document.createElement("td");
+                const curEarn = document.createElement("td");
+                const curAsset = document.createElement("td");
+                const curLiable = document.createElement("td");
+                curYear.textContent = financial.years[i];
+                curRev.textContent = currency(financial.revenue[i]);
+                curEarn.textContent = currency(financial.earnings[i]);
+                curAsset.textContent = currency(financial.assets[i]);
+                curLiable.textContent = currency(financial.liabilities[i]);
+                yearRow.appendChild(curYear);
+                revRow.appendChild(curRev);
+                earnRow.appendChild(curEarn);
+                assetRow.appendChild(curAsset);
+                liableRow.appendChild(curLiable);
+            }
+            table.append(yearRow,revRow,earnRow,assetRow,liableRow);
+        } else {
+            const errorMsg = `${company.name} does not have stored financial data`;
+            document.querySelector("#financials").appendChild(errorMsg);
         }
-
-
-
-
-
-
-
-
-
+        }
 
     function changeViews() {
         document.querySelector(".container").classList.toggle("chartView");
