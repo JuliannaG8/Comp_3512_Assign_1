@@ -67,7 +67,7 @@ img#Credits{
     display: grid;
     width: 100%;
     grid-gap: 5px;
-    grid-template-columns: auto 300px;
+    grid-template-columns: auto 400px;
 }
 .chartView #data {
     grid-column: 1;
@@ -105,4 +105,7 @@ img#Credits{
 }
 canvas {
     background-color: white;
+}
+ul li {
+    list-style: none;
 }

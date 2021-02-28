@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06c8d5cd-53a7-498b-b34e-13fef51f6679" name="Default Changelist" comment="" />
+    <list default="true" id="06c8d5cd-53a7-498b-b34e-13fef51f6679" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assign1.css" beforeDir="false" afterPath="$PROJECT_DIR$/assign1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assign1.js" beforeDir="false" afterPath="$PROJECT_DIR$/assign1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,8 +34,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Labs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Labs" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -43,6 +49,7 @@
       <updated>1614128737477</updated>
       <workItem from="1614128740172" duration="2387000" />
       <workItem from="1614190175587" duration="2898000" />
+      <workItem from="1614467044782" duration="4556000" />
     </task>
     <task id="LOCAL-00001" summary="need to commit">
       <created>1614128863432</created>
@@ -107,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614209445951</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="removed unnecassary code and added some comments">
+      <created>1614468568828</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1614468568828</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,6 +158,7 @@
     <MESSAGE value="added speech synthesis" />
     <MESSAGE value="view1 company information now shows the selected company's info, unzipped the logo folder" />
     <MESSAGE value="reorganizing" />
-    <option name="LAST_COMMIT_MESSAGE" value="reorganizing" />
+    <MESSAGE value="removed unnecassary code and added some comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed unnecassary code and added some comments" />
   </component>
 </project>
