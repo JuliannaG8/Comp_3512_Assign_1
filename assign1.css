@@ -2,7 +2,7 @@
     display: grid;
     width: 100%;
     grid-gap: 10px;
-    grid-template-columns: 20rem 40rem auto;
+    grid-template-columns: 20rem 50rem auto;
 }
 .box {
     background-color: #ccccff;
@@ -109,3 +109,4 @@ canvas {
 ul li {
     list-style: none;
 }
+th.stockColumn:hover{cursor: pointer;}

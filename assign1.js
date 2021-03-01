@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     console.log(companies);
 
     async function retrieveStocks(symbol) {
-
         try {
             const loading = document.querySelector("#loader2");
             loading.classList.toggle("hidden");
@@ -225,13 +224,67 @@ document.addEventListener("DOMContentLoaded", async function () {
         altDescribe(company);
         displayInfo(company);
         financialsTable(company);
+        stockTable(stockData);
     }
     function formatCurrency (num) {
         return new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(num);
     }
+    function stockTableSort(columnToSortBy,stocks) {
+        const sortedStocks = stocks.map(stock => {
+            return {
+                date: stock.date,
+                high: stock.high,
+                low: stock.low,
+                open: stock.open,
+                close: stock.close,
+                volume: stock.volume
+            };
+        });
+        sortedStocks.sort((a, b) => a[columnToSortBy] < b[columnToSortBy] ? -1 : 1);
+        stockTable(sortedStocks);
+    }
 //ADDED HERE
     //creating the Financials Table
-
+    function stockTable(stocks) {
+        const tableElement = document.querySelector("#stockDetails");
+        tableElement.innerHTML = "";
+        const tableData = stocks.map(stock => {
+            return {
+                date: stock.date,
+                high: parseFloat(stock.high),
+                low: parseFloat(stock.low),
+                open: parseFloat(stock.open),
+                close: parseFloat(stock.close),
+                volume: parseInt(stock.volume)
+            };
+        });
+        function createFirstTableRow(headerTextList) {
+            const rowElement = document.createElement("tr");
+            headerTextList.forEach(text => {
+                const tableHeadElement = document.createElement("th");
+                tableHeadElement.textContent = text;
+                tableHeadElement.classList.toggle("stockColumn");
+                tableHeadElement.addEventListener("click", () => stockTableSort(text.toLowerCase(), tableData));
+                rowElement.appendChild(tableHeadElement);
+            });
+            tableElement.appendChild(rowElement);
+        }
+        const tableHeaders = ["Date", "High", "Low", "Open", "Close", "Volume"];
+        createFirstTableRow(tableHeaders);
+        tableData.forEach(stock => {
+            const rowElement = document.createElement("tr");
+            for (const data in stock) {
+                const columnElement = document.createElement("td");
+                if (data === "date" || data === "volume") {
+                    columnElement.textContent = stock[data];
+                } else {
+                    columnElement.textContent = formatCurrency(stock[data]);
+                }
+                rowElement.appendChild(columnElement);
+            }
+            tableElement.appendChild(rowElement);
+        });
+    }
     function financialsTable(company) {
         const table = document.querySelector("#financial-table");
         table.innerHTML = "";//emptying table
