@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     //creating the bar chart
     function createBarChart(company) {
         const barContainer = document.querySelector("#columns");
-        if (company.hasOwnProperty('financials')) {
+        if (!!company.financials) {
             const barChart = new Chart(barContainer, {
                 type: "bar",
                 data: {
@@ -258,6 +258,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                 volume: parseInt(stock.volume)
             };
         });
+        minMaxAvgTable(tableData);
         function createFirstTableRow(headerTextList) {
             const rowElement = document.createElement("tr");
             headerTextList.forEach(text => {
@@ -269,8 +270,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             });
             tableElement.appendChild(rowElement);
         }
-        const tableHeaders = ["Date", "High", "Low", "Open", "Close", "Volume"];
-        createFirstTableRow(tableHeaders);
+        createFirstTableRow(["Date", "High", "Low", "Open", "Close", "Volume"]);
         tableData.forEach(stock => {
             const rowElement = document.createElement("tr");
             for (const data in stock) {
@@ -288,7 +288,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     function financialsTable(company) {
         const table = document.querySelector("#financial-table");
         table.innerHTML = "";//emptying table
-        if (company.hasOwnProperty('financials')) {//checking to see if financial data exists
+        if (!!company.financials) {//checking to see if financial data exists
             function buildRow(rowData,rowLabel,formatter= (b)=>b) {
                 const rowElement = document.createElement("tr");
                 const labelElement = document.createElement("th");
@@ -309,11 +309,51 @@ document.addEventListener("DOMContentLoaded", async function () {
             const liableRow = buildRow(liabilities,"Liabilities",formatCurrency);
             table.append(yearRow,revRow,earnRow,assetRow,liableRow);
         } else {//outputting error message if financial data does not exist
-            const errorMsg = `${company.name} does not have stored financial data`;
+            const errorMsg = document.createElement('p');
+            errorMsg.textContent = `${company.name} does not have stored financial data`;
             document.querySelector("#financials").appendChild(errorMsg);
         }
         }
-
+    function minMaxAvgTable(stocks) {
+        let minArray = [];
+        let maxArray = [];
+        let avgArray = [];
+        const tableElement = document.querySelector("#averages");
+        tableElement.innerHTML = "";
+        const minRowElement = document.createElement("tr");
+        const maxRowElement = document.createElement("tr");
+        const avgRowElement = document.createElement("tr");
+        const minRowHeader = document.createElement('th');
+        const maxRowHeader = document.createElement("th");
+        const avgRowHeader = document.createElement("th");
+        minRowHeader.textContent = "Minimum";
+        minRowElement.appendChild(minRowHeader);
+        maxRowHeader.textContent = "Maximum";
+        maxRowElement.appendChild(maxRowHeader);
+        avgRowHeader.textContent = "Average";
+        avgRowElement.appendChild(avgRowHeader);
+        const tableObj = {
+            min: minRowElement,
+            max: maxRowElement,
+            avg: avgRowElement
+        };
+        for (const attribute in stocks[0]){
+            if (attribute !== "date") {
+                const minMaxAvgObj = getMinMaxAvgOfStocks(stocks, attribute);
+                for (const num in minMaxAvgObj){
+                    const columnElement = document.createElement("td");
+                    if (attribute === "volume"){
+                        columnElement.textContent = minMaxAvgObj[num].toFixed(0);
+                    } else {
+                        columnElement.textContent = formatCurrency(minMaxAvgObj[num]);
+                    }
+                    tableObj[num].appendChild(columnElement);
+                }
+            }
+        }
+        tableElement.append(avgRowElement,minRowElement,maxRowElement);
+        console.log(minArray,maxArray,avgArray);
+    }
     function changeViews() {
         document.querySelector(".container").classList.toggle("chartView");
         document.querySelectorAll(".view2, .view1").forEach(element => element.classList.toggle("hidden"));
