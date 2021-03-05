@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         return storage;
     }
     const companies = await loadAndStore();
-    console.log(companies);
 
     async function retrieveStocks(symbol) {
         try {
@@ -217,7 +216,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     async function showData(company) {
         const stockData = await retrieveStocks(company.symbol);
         stockData.sort((a, b) => a.date < b.date ? -1 : 1);
-        console.log(company, stockData);
+        //console.log(company, stockData);
         createBarChart(company);
         createLineChart(stockData);
         createCandlestick(stockData);
@@ -258,7 +257,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                 volume: parseInt(stock.volume)
             };
         });
-        minMaxAvgTable(tableData);
+        createMinMaxAvgTable(tableData);
         function createFirstTableRow(headerTextList) {
             const rowElement = document.createElement("tr");
             headerTextList.forEach(text => {
@@ -314,45 +313,41 @@ document.addEventListener("DOMContentLoaded", async function () {
             document.querySelector("#financials").appendChild(errorMsg);
         }
         }
-    function minMaxAvgTable(stocks) {
-        let minArray = [];
-        let maxArray = [];
-        let avgArray = [];
+    function createMinMaxAvgTable(stocks) {
         const tableElement = document.querySelector("#averages");
         tableElement.innerHTML = "";
-        const minRowElement = document.createElement("tr");
-        const maxRowElement = document.createElement("tr");
-        const avgRowElement = document.createElement("tr");
-        const minRowHeader = document.createElement('th');
-        const maxRowHeader = document.createElement("th");
-        const avgRowHeader = document.createElement("th");
-        minRowHeader.textContent = "Minimum";
-        minRowElement.appendChild(minRowHeader);
-        maxRowHeader.textContent = "Maximum";
-        maxRowElement.appendChild(maxRowHeader);
-        avgRowHeader.textContent = "Average";
-        avgRowElement.appendChild(avgRowHeader);
+        function generateTableRow(headerText){
+            const rowElement = document.createElement("tr");
+            const rowHeader = document.createElement("th");
+            rowHeader.textContent = headerText;
+            rowElement.appendChild(rowHeader);
+            return rowElement;
+        }
+        const minRowElement = generateTableRow("Minimum");
+        const maxRowElement = generateTableRow("Maximum");
+        const avgRowElement = generateTableRow("Average");
+
         const tableObj = {
             min: minRowElement,
             max: maxRowElement,
             avg: avgRowElement
         };
-        for (const attribute in stocks[0]){
-            if (attribute !== "date") {
-                const minMaxAvgObj = getMinMaxAvgOfStocks(stocks, attribute);
-                for (const num in minMaxAvgObj){
-                    const columnElement = document.createElement("td");
-                    if (attribute === "volume"){
-                        columnElement.textContent = minMaxAvgObj[num].toFixed(0);
-                    } else {
-                        columnElement.textContent = formatCurrency(minMaxAvgObj[num]);
-                    }
-                    tableObj[num].appendChild(columnElement);
+        //iterating through list of attributes in order to get the minimum, maximum, and average values of each
+        for (const attribute of ["high", "low", "open", "close", "volume"]){
+            const minMaxAvgObj = getMinMaxAvgOfStocks(stocks, attribute);
+            //iterating through the minMaxAvgObj in order to create the columns needed, and appends the created columns to
+            //the matching key of tableObj
+            for (const [minMaxAvgKey,minMaxAvgValue] of Object.entries(minMaxAvgObj)){
+                const columnElement = document.createElement("td");
+                if (attribute === "volume"){
+                    columnElement.textContent = minMaxAvgValue.toFixed(0);
+                } else {
+                    columnElement.textContent = formatCurrency(minMaxAvgValue);
                 }
+                tableObj[minMaxAvgKey].appendChild(columnElement);
             }
         }
         tableElement.append(avgRowElement,minRowElement,maxRowElement);
-        console.log(minArray,maxArray,avgArray);
     }
     function changeViews() {
         document.querySelector(".container").classList.toggle("chartView");
