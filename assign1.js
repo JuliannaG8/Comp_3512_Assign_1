@@ -214,15 +214,14 @@ document.addEventListener("DOMContentLoaded", async function () {
         document.querySelector("#exchange").textContent = company.exchange;
     }
     async function showData(company) {
-        const stockData = await retrieveStocks(company.symbol);
-        stockData.sort((a, b) => a.date < b.date ? -1 : 1);
-        //console.log(company, stockData);
         createBarChart(company);
-        createLineChart(stockData);
-        createCandlestick(stockData);
         altDescribe(company);
         displayInfo(company);
         financialsTable(company);
+        const stockData = await retrieveStocks(company.symbol);
+        stockData.sort((a, b) => a.date < b.date ? -1 : 1);
+        createLineChart(stockData);
+        createCandlestick(stockData);
         stockTable(stockData);
     }
     function formatCurrency (num) {
@@ -245,8 +244,9 @@ document.addEventListener("DOMContentLoaded", async function () {
 //ADDED HERE
     //creating the Financials Table
     function stockTable(stocks) {
-        const tableElement = document.querySelector("#stockDetails");
-        tableElement.innerHTML = "";
+        const tableElement = document.createElement("table");
+        const tableElementContainer = document.querySelector("#stockDetails")
+        tableElementContainer.innerHTML = "";
         const tableData = stocks.map(stock => {
             return {
                 date: stock.date,
@@ -269,20 +269,22 @@ document.addEventListener("DOMContentLoaded", async function () {
             });
             tableElement.appendChild(rowElement);
         }
-        createFirstTableRow(["Date", "High", "Low", "Open", "Close", "Volume"]);
+        const rowNames = ["Date","High","Low","Open","Close","Volume"];
+        createFirstTableRow(rowNames);
         tableData.forEach(stock => {
             const rowElement = document.createElement("tr");
-            for (const data in stock) {
+            for (const attribute of rowNames) {
                 const columnElement = document.createElement("td");
-                if (data === "date" || data === "volume") {
-                    columnElement.textContent = stock[data];
+                if (attribute.toLowerCase() === "date" || attribute.toLowerCase() === "volume") {
+                    columnElement.textContent = stock[attribute.toLowerCase()];
                 } else {
-                    columnElement.textContent = formatCurrency(stock[data]);
+                    columnElement.textContent = formatCurrency(stock[attribute.toLowerCase()]);
                 }
                 rowElement.appendChild(columnElement);
             }
             tableElement.appendChild(rowElement);
         });
+        tableElementContainer.appendChild(tableElement);
     }
     function financialsTable(company) {
         const table = document.querySelector("#financial-table");

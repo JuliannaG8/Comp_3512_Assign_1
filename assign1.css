@@ -3,6 +3,7 @@
     width: 100%;
     grid-gap: 10px;
     grid-template-columns: 20rem 50rem auto;
+    grid-template-rows: auto 100px;
 }
 .box {
     background-color: #ccccff;
@@ -49,11 +50,14 @@ img#Credits{
     height: 300px;
 }
 #stockDetails {
-    width: 90%;
-    /*height: auto;*/
+    width: 100%;
+    overflow-y: scroll;
+    height: 650px;
     /*margin: 0 auto;*/
 }
-
+#stockDetails table{
+    width: 100%;
+}
 .hidden {
     display: none !important;
 }
@@ -68,6 +72,7 @@ img#Credits{
     width: 100%;
     grid-gap: 5px;
     grid-template-columns: auto 400px;
+    grid-template-rows: auto;
 }
 .chartView #data {
     grid-column: 1;
@@ -108,5 +113,9 @@ canvas {
 }
 ul li {
     list-style: none;
+}
+#company-list{
+    height: 650px;
+    overflow-y: scroll;
 }
 th.stockColumn:hover{cursor: pointer;}
