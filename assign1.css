@@ -3,6 +3,7 @@
     width: 100%;
     grid-gap: 10px;
     grid-template-columns: 20rem 50rem auto;
+    grid-template-rows: 46vh 25vh 100px;
 }
 .box {
     background-color: #ccccff;
@@ -11,25 +12,32 @@
 strong{font-size: xx-large;}
 #companies {
     grid-column: 1 / span 1;
-    grid-row: 1 / span 4;
+    grid-row: 1 / span 3;
+    /*height: 100%;*/
+    /*min-height: 700px;*/
+    /*max-height: 900px;*/
 }
 img#Credits{
     height: 50px;
 }
 #information {
-    grid-column: 2 / span 1;
-    grid-row: 1 / span 2;
+    grid-column: 2;
+    grid-row: 1;
+    /*height: 50%;*/
+    /*min-height: 400px;*/
+    /*max-height: 600px;*/
 }
-
 .info-flex {
     display: grid;
-    grid-gap: 5px;
     grid-template-columns: 10rem auto;
 }
 
 #data {
     grid-column: 3 / span 1;
-    grid-row: 1 / span 3;
+    grid-row: 1 / span 2;
+    /*height: 75%;*/
+    /*min-height: 600px;*/
+    /*max-height: 700px;*/
 }
 #description1 {
     grid-column: 1 / span 2;
@@ -37,23 +45,30 @@ img#Credits{
 
 #location {
     grid-column: 2 / span 1;
-    grid-row: 3 / span 2;
+    grid-row: 2 / span 2;
+    /*height: 100%;*/
 }
 
 #stockAverages {
     grid-column: 3 / span 1;
-    grid-row: 4;
+    grid-row: 3;
+    /*height: 100px;*/
 }
 
 #map {
-    height: 300px;
+    height: 250px;
 }
 #stockDetails {
-    width: 90%;
-    /*height: auto;*/
+    width: 100%;
+    overflow-y: scroll;
+    height: 88%;
+    /*max-height: 600px;*/
+    /*min-height: 400px;*/
     /*margin: 0 auto;*/
 }
-
+#stockDetails table{
+    width: 100%;
+}
 .hidden {
     display: none !important;
 }
@@ -68,6 +83,7 @@ img#Credits{
     width: 100%;
     grid-gap: 5px;
     grid-template-columns: auto 400px;
+    grid-template-rows: auto;
 }
 .chartView #data {
     grid-column: 1;
@@ -108,5 +124,9 @@ canvas {
 }
 ul li {
     list-style: none;
+}
+#list-container{
+    height: 75%;
+    overflow-y: scroll;
 }
 th.stockColumn:hover{cursor: pointer;}

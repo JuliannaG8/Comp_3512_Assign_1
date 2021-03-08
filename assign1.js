@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         return storage;
     }
     const companies = await loadAndStore();
-    console.log(companies);
 
     async function retrieveStocks(symbol) {
         try {
@@ -88,7 +87,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     //creating the bar chart
     function createBarChart(company) {
         const barContainer = document.querySelector("#columns");
-        if (company.hasOwnProperty('financials')) {
+        if (!!company.financials) {
             const barChart = new Chart(barContainer, {
                 type: "bar",
                 data: {
@@ -215,15 +214,14 @@ document.addEventListener("DOMContentLoaded", async function () {
         document.querySelector("#exchange").textContent = company.exchange;
     }
     async function showData(company) {
-        const stockData = await retrieveStocks(company.symbol);
-        stockData.sort((a, b) => a.date < b.date ? -1 : 1);
-        console.log(company, stockData);
         createBarChart(company);
-        createLineChart(stockData);
-        createCandlestick(stockData);
         altDescribe(company);
         displayInfo(company);
         financialsTable(company);
+        const stockData = await retrieveStocks(company.symbol);
+        stockData.sort((a, b) => a.date < b.date ? -1 : 1);
+        createLineChart(stockData);
+        createCandlestick(stockData);
         stockTable(stockData);
     }
     function formatCurrency (num) {
@@ -246,8 +244,9 @@ document.addEventListener("DOMContentLoaded", async function () {
 //ADDED HERE
     //creating the Financials Table
     function stockTable(stocks) {
-        const tableElement = document.querySelector("#stockDetails");
-        tableElement.innerHTML = "";
+        const tableElement = document.createElement("table");
+        const tableElementContainer = document.querySelector("#stockDetails")
+        tableElementContainer.innerHTML = "";
         const tableData = stocks.map(stock => {
             return {
                 date: stock.date,
@@ -258,6 +257,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                 volume: parseInt(stock.volume)
             };
         });
+        createMinMaxAvgTable(tableData);
         function createFirstTableRow(headerTextList) {
             const rowElement = document.createElement("tr");
             headerTextList.forEach(text => {
@@ -269,26 +269,27 @@ document.addEventListener("DOMContentLoaded", async function () {
             });
             tableElement.appendChild(rowElement);
         }
-        const tableHeaders = ["Date", "High", "Low", "Open", "Close", "Volume"];
-        createFirstTableRow(tableHeaders);
+        const rowNames = ["Date","High","Low","Open","Close","Volume"];
+        createFirstTableRow(rowNames);
         tableData.forEach(stock => {
             const rowElement = document.createElement("tr");
-            for (const data in stock) {
+            for (const attribute of rowNames) {
                 const columnElement = document.createElement("td");
-                if (data === "date" || data === "volume") {
-                    columnElement.textContent = stock[data];
+                if (attribute.toLowerCase() === "date" || attribute.toLowerCase() === "volume") {
+                    columnElement.textContent = stock[attribute.toLowerCase()];
                 } else {
-                    columnElement.textContent = formatCurrency(stock[data]);
+                    columnElement.textContent = formatCurrency(stock[attribute.toLowerCase()]);
                 }
                 rowElement.appendChild(columnElement);
             }
             tableElement.appendChild(rowElement);
         });
+        tableElementContainer.appendChild(tableElement);
     }
     function financialsTable(company) {
         const table = document.querySelector("#financial-table");
         table.innerHTML = "";//emptying table
-        if (company.hasOwnProperty('financials')) {//checking to see if financial data exists
+        if (!!company.financials) {//checking to see if financial data exists
             function buildRow(rowData,rowLabel,formatter= (b)=>b) {
                 const rowElement = document.createElement("tr");
                 const labelElement = document.createElement("th");
@@ -309,11 +310,47 @@ document.addEventListener("DOMContentLoaded", async function () {
             const liableRow = buildRow(liabilities,"Liabilities",formatCurrency);
             table.append(yearRow,revRow,earnRow,assetRow,liableRow);
         } else {//outputting error message if financial data does not exist
-            const errorMsg = `${company.name} does not have stored financial data`;
+            const errorMsg = document.createElement('p');
+            errorMsg.textContent = `${company.name} does not have stored financial data`;
             document.querySelector("#financials").appendChild(errorMsg);
         }
         }
+    function createMinMaxAvgTable(stocks) {
+        const tableElement = document.querySelector("#averages");
+        tableElement.innerHTML = "";
+        function generateTableRow(headerText){
+            const rowElement = document.createElement("tr");
+            const rowHeader = document.createElement("th");
+            rowHeader.textContent = headerText;
+            rowElement.appendChild(rowHeader);
+            return rowElement;
+        }
+        const minRowElement = generateTableRow("Minimum");
+        const maxRowElement = generateTableRow("Maximum");
+        const avgRowElement = generateTableRow("Average");
 
+        const tableObj = {
+            min: minRowElement,
+            max: maxRowElement,
+            avg: avgRowElement
+        };
+        //iterating through list of attributes in order to get the minimum, maximum, and average values of each
+        for (const attribute of ["high", "low", "open", "close", "volume"]){
+            const minMaxAvgObj = getMinMaxAvgOfStocks(stocks, attribute);
+            //iterating through the minMaxAvgObj in order to create the columns needed, and appends the created columns to
+            //the matching key of tableObj
+            for (const [minMaxAvgKey,minMaxAvgValue] of Object.entries(minMaxAvgObj)){
+                const columnElement = document.createElement("td");
+                if (attribute === "volume"){
+                    columnElement.textContent = minMaxAvgValue.toFixed(0);
+                } else {
+                    columnElement.textContent = formatCurrency(minMaxAvgValue);
+                }
+                tableObj[minMaxAvgKey].appendChild(columnElement);
+            }
+        }
+        tableElement.append(avgRowElement,minRowElement,maxRowElement);
+    }
     function changeViews() {
         document.querySelector(".container").classList.toggle("chartView");
         document.querySelectorAll(".view2, .view1").forEach(element => element.classList.toggle("hidden"));
