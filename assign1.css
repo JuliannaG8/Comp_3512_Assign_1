@@ -13,9 +13,6 @@ strong{font-size: xx-large;}
 #companies {
     grid-column: 1 / span 1;
     grid-row: 1 / span 3;
-    /*height: 100%;*/
-    /*min-height: 700px;*/
-    /*max-height: 900px;*/
 }
 img#Credits{
     height: 50px;
@@ -23,9 +20,6 @@ img#Credits{
 #information {
     grid-column: 2;
     grid-row: 1;
-    /*height: 50%;*/
-    /*min-height: 400px;*/
-    /*max-height: 600px;*/
 }
 .info-flex {
     display: grid;
@@ -35,9 +29,6 @@ img#Credits{
 #data {
     grid-column: 3 / span 1;
     grid-row: 1 / span 2;
-    /*height: 75%;*/
-    /*min-height: 600px;*/
-    /*max-height: 700px;*/
 }
 #description1 {
     grid-column: 1 / span 2;
@@ -56,15 +47,12 @@ img#Credits{
 }
 
 #map {
-    height: 250px;
+    height: 80%;
 }
 #stockDetails {
     width: 100%;
     overflow-y: scroll;
     height: 88%;
-    /*max-height: 600px;*/
-    /*min-height: 400px;*/
-    /*margin: 0 auto;*/
 }
 #stockDetails table{
     width: 100%;

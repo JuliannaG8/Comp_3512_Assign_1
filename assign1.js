@@ -18,11 +18,11 @@ document.addEventListener("DOMContentLoaded", async function () {
             const response = await fetch("https://www.randyconnolly.com/funwebdev/3rd/api/stocks/companies.php");
             storage = await response.json();
             localStorage.setItem("companies", JSON.stringify(storage));
+            loading.classList.toggle("hidden");
+            return storage;
         } catch (e) {
             console.error(e);
         }
-        loading.classList.toggle("hidden");
-        return storage;
     }
     const companies = await loadAndStore();
 
@@ -53,7 +53,6 @@ document.addEventListener("DOMContentLoaded", async function () {
             avg
         }
     }
-
     //creating the candlestick chart
     function createCandlestick(stocks) {
         function convertMinMaxAvgToCandlestickData({min,max,avg}) {
@@ -213,11 +212,19 @@ document.addEventListener("DOMContentLoaded", async function () {
         document.querySelector("#subIndustry").textContent = company.subindustry;
         document.querySelector("#exchange").textContent = company.exchange;
     }
+    function createMap(latitude,longitude){
+        new google.maps.Map(document.querySelector("#map"), {
+            center: {lat: latitude, lng: longitude},
+            mapTypeId: "satellite",
+            zoom: 18
+        });
+    }
     async function showData(company) {
         createBarChart(company);
         altDescribe(company);
         displayInfo(company);
         financialsTable(company);
+        createMap(company.latitude,company.longitude);
         const stockData = await retrieveStocks(company.symbol);
         stockData.sort((a, b) => a.date < b.date ? -1 : 1);
         createLineChart(stockData);
