@@ -1,7 +1,5 @@
-document.addEventListener("DOMContentLoaded", async function () {
-    const companiesURL = "https://www.randyconnolly.com/funwebdev/3rd/api/stocks/companies.php";
 
-    const mainContent = document.querySelector('#company-list');
+document.addEventListener("DOMContentLoaded", async function () {
 
     async function loadAndStore() {//function to retrieve data, either from local storage or from API
         const loading = document.querySelector("#loader1");
@@ -24,8 +22,18 @@ document.addEventListener("DOMContentLoaded", async function () {
             console.error(e);
         }
     }
+    async function showList(companies){
+        const list = document.querySelector("#company-list");
+        for(const company of companies){
+            const li = document.createElement("li");
+            li.innerHTML = company.name;
+            li.setAttribute("symbol",company.symbol)
+            li.addEventListener("click", () => showData(company));
+            list.appendChild(li);
+        }
+    }
     const companies = await loadAndStore();
-
+    showList(companies);
     async function retrieveStocks(symbol) {
         try {
             const loading = document.querySelector("#loader2");
@@ -294,8 +302,8 @@ document.addEventListener("DOMContentLoaded", async function () {
         tableElementContainer.appendChild(tableElement);
     }
     function financialsTable(company) {
-        const table = document.querySelector("#financial-table");
-        table.innerHTML = "";//emptying table
+        const tableContainer = document.querySelector("#financial-table");
+        tableContainer.innerHTML = "";//emptying table
         if (!!company.financials) {//checking to see if financial data exists
             function buildRow(rowData,rowLabel,formatter= (b)=>b) {
                 const rowElement = document.createElement("tr");
@@ -309,6 +317,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                 });
                 return rowElement;
             }
+            const table = document.createElement("table");
             const {years, revenue, earnings, assets, liabilities}=company.financials;
             const yearRow = buildRow(years,"Year");
             const revRow = buildRow(revenue,"Revenue",formatCurrency);
@@ -316,10 +325,11 @@ document.addEventListener("DOMContentLoaded", async function () {
             const assetRow = buildRow(assets,"Assets",formatCurrency);
             const liableRow = buildRow(liabilities,"Liabilities",formatCurrency);
             table.append(yearRow,revRow,earnRow,assetRow,liableRow);
+            tableContainer.appendChild(table);
         } else {//outputting error message if financial data does not exist
             const errorMsg = document.createElement('p');
             errorMsg.textContent = `${company.name} does not have stored financial data`;
-            document.querySelector("#financials").appendChild(errorMsg);
+            tableContainer.appendChild(errorMsg);
         }
         }
     function createMinMaxAvgTable(stocks) {
@@ -363,7 +373,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         document.querySelectorAll(".view2, .view1").forEach(element => element.classList.toggle("hidden"));
     }
     document.querySelectorAll(".viewChange").forEach(button => button.addEventListener('click', changeViews));
-    await showData(companies[0]);
+    // await showData(companies[0]);
   
     let timer;
     function showCredits() {
@@ -374,4 +384,18 @@ document.addEventListener("DOMContentLoaded", async function () {
         }, 5000);
     }
     document.querySelector("#Credits").addEventListener("mouseover", showCredits);
+    function startSearch(){
+        const searchParam = document.querySelector("#search-box").value;
+        const filteredCompanies = companies.filter(obj => {
+            const regex = new RegExp(searchParam, 'gi');
+            return obj.symbol.match(regex);
+        });
+        showList(filteredCompanies);
+    }
+    document.querySelector("#submit").addEventListener('click', startSearch);
+    document.querySelector("#reset").addEventListener('click', doClear);
+    function doClear(){
+        document.querySelector('#search-box').value = '';
+        showList(companies);
+    }
 });
