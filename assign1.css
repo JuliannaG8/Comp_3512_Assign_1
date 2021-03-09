@@ -148,14 +148,12 @@ th.stockColumn:hover{cursor: pointer;}
     border-bottom: 1px solid #3b2185f1;
     font-size: medium;
     list-style-type: none;
-    /*min-height: auto;*/
-    /*max-height: fit-content;*/
     text-align: center;
 }
 
 #company-list > li:hover  {
     background-color  : #2586d7;
-    color             : #fff;
+    color: #fff;
     border: 1px solid white;
     cursor: pointer;
   } 
