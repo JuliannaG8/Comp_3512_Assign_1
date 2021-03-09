@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
     async function showList(companies){
         const list = document.querySelector("#company-list");
+        list.innerHTML = "";
         for(const company of companies){
             const li = document.createElement("li");
             li.innerHTML = company.name;
